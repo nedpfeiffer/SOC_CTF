@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>E Corp VPN Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/style.css" rel="stylesheet" media="screen">
+    <style>
+      body {
+        background-color: #000;
+        background-image: url('/static/logo.jpeg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        color: #fff;
+        font-family: 'Arial', sans-serif;
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 400px;
+        padding: 20px;
+        background-color: rgba(28, 28, 28, 0.9);
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #0000ff; /* Blue color */
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 4px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #0000ff; /* Blue color */
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      .btn:hover {
+        background-color: #0000cc; /* Darker blue */
+      }
+
+      .error {
+        color: #ff0000;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>E Corp VPN Login</h1>
+      <br>
+      <form action="" method="post">
+        <input type="text" placeholder="Username" name="username" value="{{ request.form.username }}">
+        <input type="password" placeholder="Password" name="password" value="{{ request.form.password }}">
+        <input class="btn btn-default" type="submit" value="Login">
+      </form>
+      {% if error %}
+        <p class="error"><strong>Error:</strong> {{ error }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
+

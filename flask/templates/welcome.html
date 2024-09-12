@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SOC CTF</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        body {
+            background-color: #111;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            padding: 20px;
+            background-color: rgba(28, 28, 28, 0.9);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            text-align: left;
+        }
+
+        h1 {
+            color: #00faff; /* Light blue */
+        }
+
+        .disclaimer {
+            margin-bottom: 20px;
+        }
+
+        ol, ul {
+            margin-top: 0;
+            padding-left: 20px;
+        }
+
+        button {
+            background-color: #00faff; /* Light blue */
+            color: #111;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0096b3; /* Darker blue */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the SOC CTF!</h1>
+        <div class="disclaimer">
+            <p>By accessing or using this website, you agree to the terms and conditions outlined in this Disclaimer. Please read the following carefully:</p>
+            <ol>
+                <li>
+                    <strong>Authorization to Use</strong>
+                    <ul>
+                        <li>This is a controlled environment designed for educational and competitive purposes in the field of cyber security. Participants are granted explicit permission to use brute force techniques on the designated login page as part of the challenge.</li>
+                        <li>This permission is limited to this specific website provided by the SOC CTF. Unauthorized brute force attempts on other websites or any other systems are strictly prohibited.</li>
+                    </ul>
+                </li>
+                <li>
+                    <strong>Fair Use Policy</strong>
+                    <ul>
+                        <li>While brute forcing is allowed for this specific challenge, all participants must respect the fair use of our resources. Any actions that compromise the integrity or availability of the challenge environment for others (e.g. Denial of Service attacks) may result in disqualification.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>By continuing to use this site, you acknowledge that you have read, understood, and agree to be bound by this Disclaimer.</p>
+            <p>Please direct any questions or concerns to <a href="mailto:nedpfeiffer@proton.me">nedpfeiffer@proton.me</a>.</p>
+        </div>
+        <button onclick="location.href='/login';">I agree</button>
+    </div>
+</body>
+</html>
